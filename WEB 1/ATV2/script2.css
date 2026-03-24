@@ -68,4 +68,57 @@
     .img-teste{
         width: 300px;
     }
-    
+
+
+ol, ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ol {
+    counter-reset: item;
+    padding: 20px;
+}
+
+ol > li {
+    position: relative;
+    counter-increment: item;
+    background: #374151;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0 20px 40px;
+}
+
+ol > li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    font-weight: bold;
+    color: #9ca3af;
+}
+
+ul {
+    margin-top: 15px;
+}
+
+ul li {
+    background: transparent;
+    padding: 6px 0;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+}
+
+ul li::before {
+    content: "🎯";
+    margin-right: 10px;
+}
+
+.concluido {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+        
